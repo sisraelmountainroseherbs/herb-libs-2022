@@ -1,0 +1,662 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --select-border: #5b5944;
+  --select-focus: #5b5944;
+  --select-arrow: var(--select-border);
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    /* overflow: hidden; */
+    background-color: rgba(238, 238, 238, 0.7);
+}
+
+/* INTRO SECTION */
+
+#herb-lib-intro-wrapper {
+  width: 70%;
+  min-height: 325px;
+  margin: 0 auto;
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 15%;
+  right: 15%;
+}
+.herb-lib-intro-logo-wrapper {
+    height: 115px;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.herb-lib-intro-logo {
+    font-family: "Roboto", sans-serif;
+    font-size: 90px;
+    letter-spacing: 1.25px;
+    color: #1f1f1f;
+    line-height: 90px;
+}
+.herb-lib-intro-icon{
+    height: 60px;
+}
+.herb-lib-intro-title {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    font-size: 18px;
+    line-height: 18px;
+    color: #1f1f1f;
+    font-weight: 500;
+}
+.herb-lib-intro-content-wrapper {
+    height: 150px;
+    width: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.herb-lib-intro-text {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    font-size: 22px;
+    line-height: 24px;
+    color: #1f1f1f;
+    font-weight: 400;
+}
+#playHerbLibs {
+    background-color: rgba(91, 89, 68, 0.7);
+  border: none;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  padding: 0.6rem 1rem;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.66;
+  color: #1F1F1F;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 10px 0px;
+}
+
+/* Body Wrapper */
+
+#herb-lib-wrapper {
+  width: 1066.67px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: #e2e4d5;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* margin-top: 150px; */
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: calc((100vw - 1066.67px) / 2)
+}
+
+/* left header + content */
+
+.herb-lib-container {
+  height: 100%;
+  width: 62.5%;
+  float: left;
+}
+
+/* right img */
+.media-container {
+  height: 100%;
+  width: 37.5%;
+  float: right;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://cdn11.bigcommerce.com/s-8466dwhhql/product_images/uploaded_images/demulcents2.jpg);
+  background-repeat: none;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+/* HEADER */
+.herb-lib-header-container {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/* LOGO */
+#herb-lib-logo-container {
+  width: 45%;
+  height: 100%;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.herb-lib-logo {
+  font-family: "Roboto", sans-serif;
+  font-size: 50px;
+  letter-spacing: 1.25px;
+  color: #1f1f1f;
+}
+.herb-lib-logo-icon {
+  height: 30px;
+}
+/* END LOGO */
+
+/* PROGRESS TRACKER */
+#herb-lib-progress-container {
+  width: 55%;
+  height: 100%;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: "Roboto", sans-serif;
+}
+.progress {
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+  width: 90%;
+  border-radius: 2.6rem;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+.progress::before {
+  content: "";
+  background: #c5c5c5;
+  position: absolute;
+  top: 40%;
+  left: 13%;
+  height: 3px;
+  width: 75%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.line {
+  background: #5b5944;
+  position: absolute;
+  top: 40%;
+  left: 13%;
+  height: 3px;
+  width: 0%;
+  max-width: 75%;
+  transform: translateY(-50%);
+  transition: all ease-in-out 0.5s;
+  z-index: 1;
+}
+
+.step {
+  font-weight: 500;
+  z-index: 2;
+  text-transform: uppercase;
+  color: #6b6e79;
+}
+.step .circle {
+  background: #fff;
+  display: block;
+  width: 37.5px;
+  height: 37.5px;
+  margin: 7.5px auto;
+  padding-top: 7px;
+  text-align: center;
+  border: 2px solid #c5c5c5;
+  border-radius: 50%;
+  position: relative;
+  color: #5b5944;
+}
+.active,
+.done {
+  color: #5b5944;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.active .circle,
+.done .circle {
+  background: #5b5944;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  transition: all ease-in-out 0.3s;
+}
+.active .circle::before {
+  transition: all ease-in-out 0.2s;
+  font-family: FontAwesome;
+  content: "\f078";
+  font-size: 1rem;
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  color: #e2e4d5;
+}
+
+.done .circle::before {
+  font-family: FontAwesome;
+  content: "\f00c";
+  color: #fff;
+  padding-top: 8px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #5b5944;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+}
+
+
+
+/* END PROGRESS TRACKER */
+/* END HEADER */
+
+/* MAIN CONTENT */
+.herb-lib-body-container {
+  width: 100%;
+  height: 85%;
+  /* display: block; */
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* GLOBAL */
+.herbLibStepTitle {
+  margin: 0 0 0 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  text-transform: uppercase;
+  line-height: 50px;
+  color: #1f1f1f;
+  letter-spacing: 0.5px;
+}
+.herbLibStepText {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  padding-top: 25px;
+}
+
+.herb-lib-container button {
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  padding: 0.6rem 1rem;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.66;
+  color: #1f1f1f;
+}
+.herb-lib-hidden {
+  display: none !important;
+}
+
+/* END GLOBAL */
+
+/* STEP 1 SELECT STORY */
+#herbLibSelectStory {
+  width: 90%;
+  height: 85%;
+  margin: 0 auto;
+  /* background-color: pink; */
+}
+.selectStoryTextWrapper {
+  width: 100%;
+  height: 60%;
+  text-align: left;
+  /* background-color: white; */
+}
+.selectStoryForm {
+  width: 100%;
+  height: 40%;
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 1.66;
+  outline: none;
+}
+select::-ms-expand {
+  display: none;
+}
+.select {
+  width: 80%;
+  min-width: 80%;
+  max-width: 80%;
+  border-bottom: 3px solid var(--select-border);
+  /* border-radius: 0.25em; */
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: rgba(255,255,255,0.5);
+  /* background-image: linear-gradient(to top, #f9f9f9, #fff 33%); */
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  position: relative;  
+}
+.select::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: var(--select-arrow);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  justify-self: end;
+}
+select,
+.select::after {
+  grid-area: select;
+}
+select:focus + .focus {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-bottom: 4px solid var(--select-focus);
+  border-radius: inherit;
+}
+/* END STEP 1 SELECT STORY */
+
+/* STEP 2 STORY FORM */
+#herbLibStoryForm {
+  width: 95%;
+  height: 95%;
+  margin: 0 auto;
+  background-color: pink;
+}
+
+/* END STEP 2 STORY FORM */
+
+/* STEP 3 FINISHED HERB LIB */
+#finishedHerbLibStory {
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
+  background-color: pink;
+}
+.finishedDemulcents p {
+  font-family: 'Roboto', sans-serif;
+  color: #1f1f1f;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 400;
+}
+.finishedDemulcents span {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-size: 26px;
+  line-height: 28px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: #5b5944;
+}
+
+/* END STEP 3 FINISHED HERB LIB */
+
+/* BOARD WRAPPER */
+
+#herb-lib-board-wrapper {
+    width: 75%;
+  min-height: 325px;
+  margin: 0 auto;
+  /* background-color: yellow; */
+  margin-top: 150px;
+  margin-bottom: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.herb-lib-board-header-wrapper {
+    height: 150px;
+    width: 80%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#boardTitleStepTwo {
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .quote {
+    z-index: 5;
+    position: relative;
+    font-size: 2vw;
+    line-height: calc(3rem + 2vw);
+    font-family: 'Roboto', sans-serif;
+    color: #5b5944;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .quote span {
+    transition: filter 0.2s ease;
+  }
+
+  .quote span.text {
+    filter: blur(0);
+    z-index: 6;
+    position: relative;
+
+  }
+
+  .quote .blank {
+    display: inline-block;
+    position: relative;
+    line-height: 2em;
+  }
+  .quote .blank label {
+    position: absolute;
+    font-size: 1rem;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    text-align: center;
+    transition: transform 0.2s ease;
+    cursor: text;
+    line-height: 1;
+    color: #8d6e00;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .quote .blank input {
+    color: #ab7c00;
+    font-size: inherit;
+    min-width: 12rem;
+    border: 0px solid transparent;
+    border-bottom: 0.1em solid #8d6e00;
+    padding: 0 0.25em;
+    margin: 0;
+    background: transparent;
+    text-align: center;
+    border-radius: 0;
+    text-transform: uppercase;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .quote .blank input:placeholder-shown + label {
+    transform: translateY(-60%);
+  }
+  .quote .blank input:not(:placeholder-shown) + label,
+  .quote .blank input:focus + label {
+    transform: translateY(1.75vw);
+    color: #8d6e00;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .quote .blank input:focus + label {
+    color: #8d6e00;
+  }
+  .quote .blank input:focus {
+    outline: none;
+    background: rgba(255 ,255 ,255 , 0.6);
+  }
+  .quote .blank input.original {
+    display: none;
+  }
+  .buttons {
+    z-index: 4;
+    position: relative;
+    text-align: center;
+    margin-top: 4vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  .buttons button {
+    border: none;
+    font-size: 1rem;
+    background: #efefef;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    flex-grow: 1;
+    margin-left: 0.5rem;
+  }
+  .buttons button:hover,
+  .buttons button:focus {
+    background: #e2e2e2;
+  }
+  .buttons button:active {
+    background: #c9c9c9;
+  }
+  .buttons button[type="submit"] {
+    background: black;
+    color: white;
+    font-weight: bold;
+    margin-left: 0;
+    display: none;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    -webkit-font-smoothing: antialiased;
+  }
+  .buttons button[type="submit"]:hover,
+  .buttons button[type="submit"]:focus {
+    background: #000816;
+  }
+  .buttons button[type="submit"]:active {
+    background: #000816;
+  }
+  .buttons button.hide-original {
+    display: none;
+  }
+  .editing .quote span.text {
+    filter: blur(8px);
+    /* text-shadow: 0 0 5px #5b5944, 0 0  5px #fff; */
+    /* color: #6b6e79; */
+    font-size: 10px;
+  }
+  .editing .quote span.punctuation {
+    display: none;
+  }
+ 
+  .editing .buttons button {
+    display: none;
+  }
+  .editing .buttons button[type="submit"] {
+    display: block;
+  }
+  .original-shown .quote .blank label {
+    display: none;
+  }
+  .original-shown .quote .blank input.original {
+    display: block;
+  }
+  .original-shown .quote .blank input.entry {
+    display: none;
+  }
+  .original-shown .buttons button.hide-original {
+    display: block;
+  }
+  .original-shown .buttons button.show-original {
+    display: none;
+  }
+
+  /* Share Wrapper */
+
+  #herb-lib-share-wrapper {
+    width: 75%;
+  min-height: 600px;
+  margin: 0 auto;
+  background-color: yellow;
+  /* margin-top: 150px; */
+  margin-bottom: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  }
+
+  #portrait-share-wrapper {
+    width: 200px;
+    height: 300px;
+    background-color: aqua;
+  }
+
+  #square-share-wrapper {
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+  }
+  #landscape-share-wrapper {
+    width: 600px;
+    height: 315px;
+    background-color: aqua;
+  }

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEW HERB LIBS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="new-herb-libs.css" />
+    <script
+      src="https://kit.fontawesome.com/33af5ca1e3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="herb-lib-intro-wrapper">
+      <div class="herb-lib-intro-logo-wrapper">
+        <h1 class="herb-lib-intro-logo">HERB</h1>
+        <img
+          src="https://cdn11.bigcommerce.com/s-8466dwhhql/product_images/uploaded_images/favicon-nobg.png"
+          class="herb-lib-intro-icon"
+          alt="Play Herb Libs by Mountain Rose Herbs"
+        />
+        <h1 class="herb-lib-intro-logo">LIBS</h1>
+        <h4 class="herb-lib-intro-title">CREATED BY MOUNTAIN ROSE HERBS</h4>
+      </div>
+      <div class="herb-lib-intro-content-wrapper">
+        <h3 class="herb-lib-intro-text">Herb Libs is a phrasal template word game where the player is prompted for a list of words to substitute for blanks in a herbal themed story, before reading the – often comical or nonsensical – story aloud</h3>
+        <button id="playHerbLibs">CLICK HERE TO PLAY</button>
+      </div>
+    </div>
+
+    <div id="herb-lib-wrapper" class="herb-lib-hidden">
+      <div class="herb-lib-container">
+        <div class="herb-lib-header-container">
+          <div id="herb-lib-logo-container">
+            <h1 class="herb-lib-logo">HERB</h1>
+            <img
+              src="https://cdn11.bigcommerce.com/s-8466dwhhql/product_images/uploaded_images/favicon-nobg.png"
+              class="herb-lib-logo-icon"
+              alt="Herb Libs by Mountain Rose Herbs"
+            />
+            <h1 class="herb-lib-logo">LIBS</h1>
+          </div>
+
+          <div id="herb-lib-progress-container">
+            <div class="progress">
+              <div id="line" class="line"></div>
+              <div id="stepOne" class="step active">
+                <span class="circle">1</span>
+                <span class="title">STORY</span>
+              </div>
+              <div id="stepTwo" class="step">
+                <span class="circle">2</span>
+                <span class="title">FORM</span>
+              </div>
+              <div id="stepThree" class="step">
+                <span class="circle">3</span>
+                <span class="title">HERB LIB</span>
+              </div>
+              <div id="stepFour" class="step">
+                <span class="circle">4</span>
+                <span class="title">SHARE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-lib-body-container">
+          <div id="herbLibSelectStory">
+            <div class="selectStoryTextWrapper">
+              <h2 class="herbLibStepTitle">
+                STEP 1: CHOOSE YOUR HERB LIB STORY
+              </h2>
+              <h3 class="herbLibStepText">
+                Select a story from the dropdown menu below. If you change your
+                mind, you can always go back and select another Herb Lib story
+                option. All Herb Lib stories are adapted from Mountain Rose
+                Herbs blogs. Check back soon for new story options!
+              </h3>
+            </div>
+
+            <div class="selectStoryForm">
+              <div class="select" id="select">
+                <select
+                  name="herbLibSelect"
+                  id="herbLibSelect"
+                  onchange="changeBgStepOne();"
+                >
+                  <option
+                    id="select-placeholder"
+                    value=""
+                    disabled
+                    selected
+                    hidden
+                  >
+                    SELECT A STORY
+                  </option>
+                  <option id="select-demulcents" value="demulcents">
+                    WHAT ARE DEMULCENTS?
+                  </option>
+                  <option id="select-adaptogens" value="adaptogens">
+                    WHAT ARE ADAPTOGENS?
+                  </option>
+                  <option id="select-lemons" value="lemon">
+                    THE HISTORY OF LEMON BALM
+                  </option>
+                </select>
+                <span class="focus"></span>
+              </div>
+              <button id="getHerbLibForm" class="nextStepOne">
+                GET STARTED
+              </button>
+            </div>
+          </div>
+
+          <div id="herbLibStoryForm" class="herb-lib-hidden">
+            <h2 class="herbLibStepTitle">STEP 2: FILL IN THE BLANKS</h2>
+            <div></div>
+            <button id="chooseHerbLibAgain" class="backStepTwo">
+              Change Herb Lib?
+            </button>
+            <button id="getHerbLibStory" class="nextStepTwo">
+              Get Herb Lib!
+            </button>
+          </div>
+
+          <div id="finishedHerbLibStory" class="herb-lib-hidden">
+            <h2
+              id="demulcentsHerbLibTitle"
+              class="herbLibStepTitle herb-lib-hidden"
+            >
+              WHAT ARE DEMULCENTS?
+            </h2>
+            <p id="demulcentsHerbLibText" class="herb-lib-hidden">
+              Herbs that are mucilaginous or oily and produce a "goo" that
+              coats, soothes, and <span></span> <span></span> membranes. This slime action
+              <span></span> a reflex that helps promote natural moistening
+              <span></span> within the body. They are best extracted as an
+              infusion in <span></span> rather than in <span></span> tincture form.
+            </p>
+
+            <h2
+              class="herbLibStepTitle herb-lib-hidden"
+            >
+              WHAT ARE ADAPTOGENS?
+            </h2>
+            <p id="adaptogensHerbLibText" class="herb-lib-hidden">
+              This diverse group of <span></span> helps us face and handle
+              <span></span> as it happens. These <span></span> restore overall balance
+              and strengthen the functioning of the body as a whole without
+              <span></span> the balance of an individual <span></span> or body system.
+              Adaptogens facilitate these changes through a wide range of <span></span>
+              actions, rather than one <span></span> action. Adaptogens can be
+              <span></span> or <span></span> and may help improve focus,
+              maintain <span></span> <span></span>'s immune system, or provide some other
+              broad-spectrum normalizing influence on unbalanced <span></span>.
+            </p>
+
+            <h2  class="herbLibStepTitle herb-lib-hidden">
+              THE HISTORY OF LEMON BALM
+            </h2>
+            <p id="lemonHerbLibText" class="herb-lib-hidden">
+              Lemon balm (<span></span> officinalis) is a member of the mint
+              family (Lamiaceae). This sizeable family has over 3,500 members,
+              including some of the most commonly used <span></span> herbs, like
+              <span></span>, lavendar, <span></span>, and thyme. The translation
+              of the word <span></span> in Greek is honeybee, aptly named since
+              lemon balm is a favorite of our pollinating friends. This
+              <span></span> perennial is native to southern <span></span> and is
+              known for its <span></span> and aromatic <span></span> scent and flavor,
+              as well as its <span></span> uses and benefits. The use of lemon balm is recorded as far as
+              <span></span> BCE, where it was referred to as “honey
+              <span></span>” by a Greek scholar named <span></span>phrastus. During
+              the Tudor period, lemon balm was scattered on <span></span> to
+              freshen <span></span> with its delightful scent. It is safe to say
+              that lemon balm's reputation has been long established as a versatile, delicious, and <span></span> herb.
+            </p>
+            <br />
+
+            <button id="herb-lib-reset" class="backStepThree">
+              Try Again?
+            </button>
+            <button id="shareHerbLibStory" class="nextStepThree">
+              SHARE YOUR HERB LIB
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="mediaContainer" class="media-container"></div>
+    </div>
+
+    <div id="herb-lib-board-wrapper" class="herb-lib-hidden">
+        <div class="herb-lib-board-header-wrapper">
+            <h2 class="herbLibStepTitle" id="boardTitleStepTwo">STEP 2: FILL IN THE BLANKS</h2>
+            <h2 class="herbLibStepTitle herb-lib-hidden" id="boardTitleStepThree">STEP 3</h2>
+        </div>
+        <div class="container editing">
+            <form autocomplete="off">
+                <div class="quote"></div>
+                <div class="buttons">
+                    <button type="submit" id="revealHerbLib">REVEAL YOUR HERB LIB</button>
+                    <button class="show-original">VIEW ORIGINAL TEXT</button>
+                    <button class="hide-original">HIDE ORIGINAL TEXT</button>
+                    <button type="reset" class="new">TRY AGAIN?</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="herb-lib-share-wrapper" class="herb-lib-hidden">
+        <div id="portrait-share-wrapper"></div>
+        <div id="square-share-wrapper"></div>
+        <div id="landscape-share-wrapper"></div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdn.rawgit.com/jonwilcox/e1dafe4d7f7d1fce61d5e8693fa859b8/raw/6479be884a0f4e6ed9bfd4823805cb1b44882b33/lexer.js'></script>
+    <script src='https://cdn.rawgit.com/jonwilcox/f3b5c9b8b86c096ad35e7d6eec657be5/raw/75389501d80d96f4ac2c0b9df52a57a833a8dd68/lexicon.js'></script>
+    <script src='https://cdn.rawgit.com/jonwilcox/0d8b7bd0d7c5c59de27d3cb03880b7e9/raw/07998183dface881bcc1cbeb8fff111b85f36387/POSTagger.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/stretchy/1.1.0/stretchy.js'></script>
+    <script src="new-herb-libs.js"></script>
+
+  </body>
+</html>
