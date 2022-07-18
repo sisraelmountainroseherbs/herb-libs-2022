@@ -31,8 +31,9 @@
       </div>
       <div class="herb-lib-intro-content-wrapper">
         <h3 class="herb-lib-intro-text">Herb Libs is a phrasal template word game where the player is prompted for a list of words to substitute for blanks in a herbal themed story, before reading the – often comical or nonsensical – story aloud</h3>
-        <button id="playHerbLibs">CLICK HERE TO PLAY</button>
+        <button id="playHerbLibs">CLICK HERE TO PLAY &#8594</button>
       </div>
+
     </div>
 
     <div id="herb-lib-wrapper" class="herb-lib-hidden">
@@ -53,19 +54,19 @@
               <div id="line" class="line"></div>
               <div id="stepOne" class="step active">
                 <span class="circle">1</span>
-                <span class="title">STORY</span>
+                <span class="title progress-title">CHOOSE</span>
               </div>
               <div id="stepTwo" class="step">
                 <span class="circle">2</span>
-                <span class="title">FORM</span>
+                <span class="title progress-title">CREATE</span>
               </div>
               <div id="stepThree" class="step">
                 <span class="circle">3</span>
-                <span class="title">HERB LIB</span>
+                <span class="title progress-title">RECEIVE</span>
               </div>
               <div id="stepFour" class="step">
                 <span class="circle">4</span>
-                <span class="title">SHARE</span>
+                <span class="title progress-title">SHARE</span>
               </div>
             </div>
           </div>
@@ -92,7 +93,7 @@
                   id="herbLibSelect"
                   onchange="changeBgStepOne();"
                 >
-                  <option
+                  <!-- <option
                     id="select-placeholder"
                     value=""
                     disabled
@@ -100,7 +101,7 @@
                     hidden
                   >
                     SELECT A STORY
-                  </option>
+                  </option> -->
                   <option id="select-demulcents" value="demulcents">
                     WHAT ARE DEMULCENTS?
                   </option>
@@ -114,7 +115,7 @@
                 <span class="focus"></span>
               </div>
               <button id="getHerbLibForm" class="nextStepOne">
-                GET STARTED
+                STEP 2: FILL IN THE BLANKS &#8594
               </button>
             </div>
           </div>
@@ -196,6 +197,15 @@
     </div>
 
     <div id="herb-lib-board-wrapper" class="herb-lib-hidden">
+        <div id="board-logo-wrapper">
+          <h1 class="herb-lib-board-logo">HERB</h1>
+          <img
+            src="https://cdn11.bigcommerce.com/s-8466dwhhql/product_images/uploaded_images/favicon-nobg.png"
+            class="herb-lib-board-logo-icon"
+            alt="Herb Libs by Mountain Rose Herbs"
+          />
+          <h1 class="herb-lib-board-logo">LIBS</h1>
+        </div>
         <div class="herb-lib-board-header-wrapper">
             <h2 class="herbLibStepTitle" id="boardTitleStepTwo">STEP 2: FILL IN THE BLANKS</h2>
             <h2 class="herbLibStepTitle herb-lib-hidden" id="boardTitleStepThree">STEP 3</h2>
@@ -204,14 +214,18 @@
             <form autocomplete="off">
                 <div class="quote"></div>
                 <div class="buttons">
-                    <button type="submit" id="revealHerbLib">REVEAL YOUR HERB LIB</button>
-                    <button class="show-original">VIEW ORIGINAL TEXT</button>
-                    <button class="hide-original">HIDE ORIGINAL TEXT</button>
-                    <button type="reset" class="new">TRY AGAIN?</button>
+                    <button type="submit" id="revealHerbLib">REVEAL YOUR HERB LIB &#8594</button>
+                    <button class="step-two-back" id="chooseStoryAgainStepTwo">&#8592 CHOOSE A DIFFERENT STORY</button>
+                    <button class="show-original" id="showOriginal">VIEW ORIGINAL TEXT</button>
+                    <button class="hide-original" id="hideOriginal">HIDE ORIGINAL TEXT</button>
+                    <button type="reset" class="new" id="tryAgainStepThree">&#8592 TRY AGAIN</button>
+                    <button class="step-three-next" id="shareStoryStepThree">SHARE YOUR HERB LIB &#8594</button>
                 </div>
             </form>
         </div>
     </div>
+
+    <!-- <div id="progress-board-wrapper"></div> -->
 
     <div id="herb-lib-share-wrapper" class="herb-lib-hidden">
         <div id="portrait-share-wrapper"></div>

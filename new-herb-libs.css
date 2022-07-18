@@ -12,17 +12,17 @@
 }
 
 body {
-    position: relative;
-    min-height: 100vh;
-    /* overflow: hidden; */
-    background-color: rgba(238, 238, 238, 0.7);
+  position: relative;
+  min-height: 100vh;
+  /* overflow: hidden; */
+  background-color: rgba(238, 238, 238, 0.2);
 }
 
 /* INTRO SECTION */
 
 #herb-lib-intro-wrapper {
   width: 70%;
-  min-height: 325px;
+  /* min-height: 325px; */
   margin: 0 auto;
   /* background-color: yellow; */
   display: flex;
@@ -37,63 +37,69 @@ body {
   transform: translateY(-50%);
   left: 15%;
   right: 15%;
+  overflow: visible;
 }
 .herb-lib-intro-logo-wrapper {
-    height: 115px;
-    width: 100%;
-    /* background-color: aqua; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+  /* height: 115px; */
+  width: 100%;
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .herb-lib-intro-logo {
-    font-family: "Roboto", sans-serif;
-    font-size: 90px;
-    letter-spacing: 1.25px;
-    color: #1f1f1f;
-    line-height: 90px;
+  font-family: "Roboto", sans-serif;
+  font-size: 90px;
+  letter-spacing: 1.25px;
+  color: #1f1f1f;
+  line-height: 90px;
 }
-.herb-lib-intro-icon{
-    height: 60px;
+.herb-lib-intro-icon {
+  height: 60px;
 }
 .herb-lib-intro-title {
-    font-family: 'Roboto', sans-serif;
-    width: 100%;
-    font-size: 18px;
-    line-height: 18px;
-    color: #1f1f1f;
-    font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  font-size: 18px;
+  line-height: 18px;
+  color: #1f1f1f;
+  font-weight: 500;
 }
 .herb-lib-intro-content-wrapper {
-    height: 150px;
-    width: 100%;
-    /* background-color: blueviolet; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+  height: 150px;
+  width: 100%;
+  /* background-color: blueviolet; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .herb-lib-intro-text {
-    font-family: 'Roboto', sans-serif;
-    width: 100%;
-    font-size: 22px;
-    line-height: 24px;
-    color: #1f1f1f;
-    font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  font-size: 22px;
+  line-height: 24px;
+  color: #1f1f1f;
+  font-weight: 400;
+  margin-top: 25px;
 }
 #playHerbLibs {
-    background-color: rgba(91, 89, 68, 0.7);
+  background: #1f1f1f;
   border: none;
-  border-radius: 4px;
-  font-family: "Roboto", sans-serif;
-  padding: 0.6rem 1rem;
-  font-size: 22px;
-  font-weight: 500;
+  border-radius: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
-  line-height: 1.66;
-  color: #1F1F1F;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 10px 0px;
+  line-height: normal;
+  color: white;
+  flex-grow: 1;
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 10px 0px;
+  margin-top: 25px;
 }
 
 /* Body Wrapper */
@@ -109,12 +115,12 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   /* margin-top: 150px; */
-  overflow: hidden;
+  overflow: visible;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  left: calc((100vw - 1066.67px) / 2)
+  left: calc((100vw - 1066.67px) / 2);
 }
 
 /* left header + content */
@@ -146,6 +152,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 7.5px;
 }
 /* LOGO */
 #herb-lib-logo-container {
@@ -256,7 +263,7 @@ body {
   position: absolute;
   top: -20px;
   left: 10px;
-  color: #e2e4d5;
+  color: transparent;
 }
 
 .done .circle::before {
@@ -272,8 +279,6 @@ body {
   left: 0;
   border-radius: 50%;
 }
-
-
 
 /* END PROGRESS TRACKER */
 /* END HEADER */
@@ -309,16 +314,17 @@ body {
 }
 
 .herb-lib-container button {
-  background-color: #fff;
+  background: #1f1f1f;
   border: none;
-  border-radius: 4px;
   font-family: "Roboto", sans-serif;
-  padding: 0.6rem 1rem;
-  font-size: 22px;
-  font-weight: 500;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.66;
-  color: #1f1f1f;
+  line-height: normal;
+  color: rgba(255, 255, 255, 1);
+  flex-grow: 1;
 }
 .herb-lib-hidden {
   display: none !important;
@@ -342,6 +348,7 @@ body {
 .selectStoryForm {
   width: 100%;
   height: 40%;
+  margin-left: 0%;
   /* background-color: green; */
   display: flex;
   align-items: center;
@@ -356,30 +363,34 @@ select {
   margin: 0;
   width: 100%;
   font-family: "Roboto", sans-serif;
-  font-size: 22px;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
   cursor: pointer;
-  line-height: 1.66;
+  line-height: normal;
   outline: none;
 }
 select::-ms-expand {
   display: none;
 }
 .select {
-  width: 80%;
-  min-width: 80%;
-  max-width: 80%;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
   border-bottom: 3px solid var(--select-border);
   /* border-radius: 0.25em; */
-  padding: 0.25em 0.5em;
-  font-size: 1.25rem;
+  padding: 1rem 0.5em;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
   cursor: pointer;
   line-height: 1.1;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 1);
   /* background-image: linear-gradient(to top, #f9f9f9, #fff 33%); */
   display: grid;
   grid-template-areas: "select";
   align-items: center;
-  position: relative;  
+  position: relative;
 }
 .select::after {
   content: "";
@@ -422,14 +433,14 @@ select:focus + .focus {
   background-color: pink;
 }
 .finishedDemulcents p {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #1f1f1f;
   font-size: 22px;
   line-height: 28px;
   font-weight: 400;
 }
 .finishedDemulcents span {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #fff;
   font-size: 26px;
   line-height: 28px;
@@ -443,7 +454,7 @@ select:focus + .focus {
 /* BOARD WRAPPER */
 
 #herb-lib-board-wrapper {
-    width: 75%;
+  width: 75%;
   min-height: 325px;
   margin: 0 auto;
   /* background-color: yellow; */
@@ -456,182 +467,243 @@ select:focus + .focus {
   text-align: center;
 }
 
+#board-logo-wrapper {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.herb-lib-board-logo {
+  font-family: 'Roboto', sans-serif;
+  font-size: 70px;
+  letter-spacing: 1.25px;
+  color: #1f1f1f;
+  line-height: 70px;
+}
+.herb-lib-board-logo-icon {
+  height: 50px;
+}
+
 .herb-lib-board-header-wrapper {
-    height: 150px;
-    width: 80%;
-    /* background-color: aqua; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+  height: unset;
+  min-height: 100px;
+  width: 90%;
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 #boardTitleStepTwo {
-    font-size: 60px;
-    line-height: 60px;
+  font-size: 60px;
+  line-height: 60px;
 }
 
 .container {
-    width: 100%;
-    margin: 0 auto;
-  }
-  .quote {
-    z-index: 5;
-    position: relative;
-    font-size: 2vw;
-    line-height: calc(3rem + 2vw);
-    font-family: 'Roboto', sans-serif;
-    color: #5b5944;
-    font-weight: 400;
-    text-transform: uppercase;
-  }
-  .quote span {
-    transition: filter 0.2s ease;
-  }
+  width: 100%;
+  margin: 0 auto;
+}
+.quote {
+  z-index: 5;
+  position: relative;
+  font-size: 2vw;
+  line-height: calc(3rem + 2vw);
+  font-family: "Roboto", sans-serif;
+  color: #5b5944;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.quote span {
+  transition: filter 0.2s ease;
+}
 
-  .quote span.text {
-    filter: blur(0);
-    z-index: 6;
-    position: relative;
+.quote span.text {
+  filter: blur(0);
+  z-index: 6;
+  position: relative;
+}
 
-  }
+.quote .blank {
+  display: inline-block;
+  position: relative;
+  line-height: 2em;
+}
+.quote .blank label {
+  position: absolute;
+  font-size: 1rem;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  text-align: center;
+  transition: transform 0.2s ease;
+  cursor: text;
+  line-height: 1;
+  color: #8d6e00;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.quote .blank input {
+  color: #ab7c00;
+  font-size: inherit;
+  min-width: 12rem;
+  border: 0px solid transparent;
+  border-bottom: 0.1em solid #8d6e00;
+  padding: 0 0.25em;
+  margin: 0;
+  background: transparent;
+  text-align: center;
+  border-radius: 0;
+  text-transform: uppercase;
+  margin-left: 15px;
+  margin-right: 15px;
+}
 
-  .quote .blank {
-    display: inline-block;
-    position: relative;
-    line-height: 2em;
-  }
-  .quote .blank label {
-    position: absolute;
-    font-size: 1rem;
-    width: 100%;
-    left: 0;
-    top: 50%;
-    text-align: center;
-    transition: transform 0.2s ease;
-    cursor: text;
-    line-height: 1;
-    color: #8d6e00;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-  .quote .blank input {
-    color: #ab7c00;
-    font-size: inherit;
-    min-width: 12rem;
-    border: 0px solid transparent;
-    border-bottom: 0.1em solid #8d6e00;
-    padding: 0 0.25em;
-    margin: 0;
-    background: transparent;
-    text-align: center;
-    border-radius: 0;
-    text-transform: uppercase;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
+.quote .blank input:placeholder-shown + label {
+  transform: translateY(-60%);
+}
+.quote .blank input:not(:placeholder-shown) + label,
+.quote .blank input:focus + label {
+  transform: translateY(1.75vw);
+  color: #8d6e00;
+  font-size: 12px;
+  font-weight: 400;
+}
+.quote .blank input:focus + label {
+  color: #8d6e00;
+}
+.quote .blank input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.6);
+}
+.quote .blank input.original {
+  display: none;
+}
+.buttons {
+  z-index: 4;
+  position: relative;
+  text-align: center;
+  margin-top: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 75px;
+}
+.buttons button {
+  border: none;
+  font-size: 1rem;
+  background: #1f1f1f;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  flex-grow: 0.45;
+  margin-left: 0rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  display: block;
+  width: 45%;
+  margin-bottom: 15px;
+}
+#chooseStoryAgainStepTwo {
+  display: none;
+  background: #1f1f1f;
+  color: white;
+  font-weight: bold;
+  margin-left: 0;
+  display: none;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  flex-grow: 1;
+}
+#showOriginal, #hideOriginal {
+  width: 100%;
+  flex-grow: 1;
+}
+.buttons button:hover,
+.buttons button:focus {
+  background: #e2e2e2;
+}
+.buttons button:active {
+  background: #c9c9c9;
+}
+.buttons button[type="submit"] {
+  background: #1f1f1f;
+  color: white;
+  font-weight: bold;
+  margin-left: 0;
+  display: none;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  flex-grow: 1;
+  margin-bottom: 15px;
+}
+.buttons button[type="submit"]:hover,
+.buttons button[type="submit"]:focus {
+  background: #000816;
+}
+.buttons button[type="submit"]:active {
+  background: #000816;
+}
+.buttons button.hide-original {
+  display: none;
+}
+.editing .quote span.text {
+  filter: blur(8px);
+  /* text-shadow: 0 0 5px #5b5944, 0 0  5px #fff; */
+  /* color: #6b6e79; */
+  font-size: 10px;
+}
+.editing .quote span.punctuation {
+  display: none;
+}
 
-  .quote .blank input:placeholder-shown + label {
-    transform: translateY(-60%);
-  }
-  .quote .blank input:not(:placeholder-shown) + label,
-  .quote .blank input:focus + label {
-    transform: translateY(1.75vw);
-    color: #8d6e00;
-    font-size: 12px;
-    font-weight: 400;
-  }
-  .quote .blank input:focus + label {
-    color: #8d6e00;
-  }
-  .quote .blank input:focus {
-    outline: none;
-    background: rgba(255 ,255 ,255 , 0.6);
-  }
-  .quote .blank input.original {
-    display: none;
-  }
-  .buttons {
-    z-index: 4;
-    position: relative;
-    text-align: center;
-    margin-top: 4vw;
-    display: flex;
-    justify-content: space-between;
-  }
-  .buttons button {
-    border: none;
-    font-size: 1rem;
-    background: #efefef;
-    padding: 1rem 2rem;
-    cursor: pointer;
-    flex-grow: 1;
-    margin-left: 0.5rem;
-  }
-  .buttons button:hover,
-  .buttons button:focus {
-    background: #e2e2e2;
-  }
-  .buttons button:active {
-    background: #c9c9c9;
-  }
-  .buttons button[type="submit"] {
-    background: black;
-    color: white;
-    font-weight: bold;
-    margin-left: 0;
-    display: none;
-    font-size: 1.5rem;
-    letter-spacing: 0.1rem;
-    -webkit-font-smoothing: antialiased;
-  }
-  .buttons button[type="submit"]:hover,
-  .buttons button[type="submit"]:focus {
-    background: #000816;
-  }
-  .buttons button[type="submit"]:active {
-    background: #000816;
-  }
-  .buttons button.hide-original {
-    display: none;
-  }
-  .editing .quote span.text {
-    filter: blur(8px);
-    /* text-shadow: 0 0 5px #5b5944, 0 0  5px #fff; */
-    /* color: #6b6e79; */
-    font-size: 10px;
-  }
-  .editing .quote span.punctuation {
-    display: none;
-  }
- 
-  .editing .buttons button {
-    display: none;
-  }
-  .editing .buttons button[type="submit"] {
-    display: block;
-  }
-  .original-shown .quote .blank label {
-    display: none;
-  }
-  .original-shown .quote .blank input.original {
-    display: block;
-  }
-  .original-shown .quote .blank input.entry {
-    display: none;
-  }
-  .original-shown .buttons button.hide-original {
-    display: block;
-  }
-  .original-shown .buttons button.show-original {
-    display: none;
-  }
+.editing .buttons button {
+  display: none;
+}
+.editing .buttons button[type="submit"] {
+  display: block;
+}
+.editing .buttons #chooseStoryAgainStepTwo {
+  display: block;
+}
+.original-shown .quote .blank label {
+  display: none;
+}
+.original-shown .quote .blank input.original {
+  display: block;
+}
+.original-shown .quote .blank input.entry {
+  display: none;
+}
+.original-shown .buttons button.hide-original {
+  display: block;
+}
+.original-shown .buttons button.show-original {
+  display: none;
+}
 
-  /* Share Wrapper */
+/* Progress Board Wrapper */
+#progress-board-wrapper {
+  width: 80px;
+  height: 350px;
+  background-color: red;
+  position: fixed;
+  bottom: 7.5%;
+  left: 0px;
+}
 
-  #herb-lib-share-wrapper {
-    width: 75%;
+/* Share Wrapper */
+
+#herb-lib-share-wrapper {
+  width: 75%;
   min-height: 600px;
   margin: 0 auto;
   background-color: yellow;
@@ -642,21 +714,389 @@ select:focus + .focus {
   justify-content: space-around;
   flex-wrap: wrap;
   text-align: center;
+}
+
+#portrait-share-wrapper {
+  width: 200px;
+  height: 300px;
+  background-color: aqua;
+}
+
+#square-share-wrapper {
+  width: 300px;
+  height: 300px;
+  background-color: aqua;
+}
+#landscape-share-wrapper {
+  width: 600px;
+  height: 315px;
+  background-color: aqua;
+}
+
+@media screen and (max-width: 1279px) {
+  #herb-lib-intro-wrapper {
+    width: 80%;
+    left: 10%;
+    right: 10%;
+  }
+  #playHerbLibs {
+    font-size: 1.25rem;
+  }
+  #herb-lib-wrapper {
+    width: 760px;
+    height: 500px;
+    left: calc((100vw - 760px) / 2);
+    overflow: visible;
+  }
+  .herb-lib-container {
+    width: 58.75%;
+  }
+  .herb-lib-header-container {
+    height: 12.5%;
+    padding-top: 15px;
+  }
+  #herb-lib-logo-container {
+    width: 90%;
+    justify-content: left;
+  }
+  #herb-lib-progress-container {
+    width: 350px;
+    height: 150%;
+    position: relative;
+    top: -57.5px;
+    left: 355px;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  .progress {
+    padding: 0px;
+    width: 100%;
+  }
+  .step .circle {
+    margin: 0px auto;
+    margin-top: 9.35938px;
   }
 
-  #portrait-share-wrapper {
-    width: 200px;
-    height: 300px;
-    background-color: aqua;
+  .herb-lib-body-container {
+    height: 87.5%;
+  }
+  .herbLibStepTitle {
+    font-size: 38px;
+    line-height: 38px;
+  }
+  .herbLibStepText {
+    font-size: 18px;
+    line-height: 22px;
+    padding-top: 20px;
+  }
+  .select {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    font-size: 1.25rem;
+  }
+  select {
+    width: 375px !important;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  .herb-lib-container button {
+    background: #1f1f1f;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: normal;
+    color: rgba(255, 255, 255, 1);
+    flex-grow: 1;
+  }
+  .media-container {
+    width: 41.25%;
   }
 
-  #square-share-wrapper {
+  #herb-lib-board-wrapper {
+    width: 85%;
+  }
+#board-logo-wrapper {
+  width: 90%;
+}
+.herb-lib-board-logo {
+  font-family: 'Roboto', sans-serif;
+  font-size: 65px;
+  letter-spacing: 1.25px;
+  color: #1f1f1f;
+  line-height: 65px;
+}
+.herb-lib-board-logo-icon {
+  height: 45px;
+}
+  .herb-lib-board-header-wrapper {
+    width: 100%;
+  }
+  #boardTitleStepTwo {
+    font-size: 46px;
+    line-height: 46px;
+    font-weight: 500;
+    top: 0px;
+    padding: 0px;
+  }
+  #boardTitleStepThree {
+    font-size: 46px;
+    line-height: 46px;
+    font-weight: 500;
+    top: 0px;
+    padding: 0px;
+  }
+  .quote {
+    font-size: 26px;
+    line-height: calc(3rem + 26px);
+  }
+  .quote .blank input:not(:placeholder-shown) + label,
+.quote .blank input:focus + label {
+  transform: translateY(3vw);
+}
+
+.buttons button[type="submit"] {
+  font-size: 1.25rem;
+}
+}
+
+@media screen and (max-width: 768px) {
+  #herb-lib-intro-wrapper {
+    width: 85%;
+    left: 7.5%;
+    right: 7.5%;
+  }
+  .herb-lib-intro-logo {
+    font-size: 70px;
+    line-height: 70px;
+  }
+  .herb-lib-intro-icon {
+    height: 50px;
+  }
+  .herb-lib-intro-text {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  #herb-lib-wrapper {
+    width: 360.75px;
+    height: 665px;
+    left: calc((100vw - 360.75px) / 2);
+    border-radius: 0px;
+    background-color: #fff;
+    overflow: visible;
+  }
+  .herb-lib-container {
+    width: 342.703px;
+    height: 700px;
+    position: relative;
+    top: -2.5%;
+    background-color: #e2e4d5;
+    border-radius: 4px;
+  }
+  .herb-lib-header-container {
+    padding-top: 0px;
+    position: relative;
+    top: -1.75%;
+  }
+  #herb-lib-logo-container {
+    justify-content: left;
+    text-align: left;
+    z-index: 100;
+  }
+  #herb-lib-progress-container {
+    display: block;
+    z-index: 100;
+    /* background-color: red; */
+    width: 275px;
+    height: 65px;
+    position: relative;
+    top: 280px;
+    left: 21.24805px;
+    /* background-color: rgba(255,255,255, 0.7); */
+    background-color: transparent;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  .progress {
+    width: 100%;
+  }
+  .step .circle {
+    margin-top: 5px;
+  }
+
+  #herbLibSelectStory {
+    width: 87.5%;
+    margin-left: 12.5%;
+  }
+  .media-container {
+    width: 85%;
+    height: 340px;
+    position: relative;
+    top: -98.5%;
+    float: none;
+    border-radius: 4px;
+    opacity: 0.95;
+    z-index: 50;
+  }
+  .herb-lib-logo {
+    font-size: 40px;
+    z-index: 100;
+  }
+  .herbLibStepTitle {
+    font-size: 30px;
+    line-height: 32px;
+    position: relative;
+    top: 37.5%;
+    left: 0px;
+    font-weight: 400;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #1f1f1f;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding-left: 2.5%;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+  }
+  .herbLibStepText {
+    font-size: 16px;
+    line-height: 18px;
+    padding-top: 0px;
+    position: relative;
+    top: 65%;
+    /* padding-right: 2.5%; */
+    width: 320px;
+    left: -25px;
+    /* padding-left: 2.5%; */
+  }
+  .select {
+    width: 105%;
+    min-width: 105%;
+    max-width: 105%;
+    padding: 0;
+    position: relative;
+    top: 45%;
+    background-color: rgba(255, 255, 255, 0.8);
+    left: -20px;
+  }
+  select {
+    width: 95% !important;
+    font-size: 16px;
+    padding-left: 2.5%;
+    font-weight: 500;
+    padding-bottom: 7.5px;
+    padding-top: 7.5px;
+  }
+  .select::after {
+    margin-right: 2.5%;
+  }
+  .herb-lib-container button {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 0.75rem 3rem;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 300;
+    position: relative;
+    top: 22.5%;
+    border-radius: 4px;
+    left: -5px;
+    width: 95%;
+  }
+
+  #herb-lib-board-wrapper {
+    width: 90%;
+    text-align: justify;
+  }
+  #board-logo-wrapper {
+    width: 100%;
+  }
+  #board-logo-wrapper {
+    width: 100%;
+  }
+  .herb-lib-board-logo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    letter-spacing: 1.25px;
+    color: #1f1f1f;
+    line-height: 50px;
+  }
+  .herb-lib-board-logo-icon {
+    height: 40px;
+  }
+  .herb-lib-board-header-wrapper {
+    width: 100%;
+    min-height: 60px;
+    height: unset;
+    overflow: hidden;
+    text-align: center;
+  }
+  #boardTitleStepTwo {
+    font-size: 34px;
+    line-height: 34px;
+  }
+  #boardTitleStepThree {
+    font-size: 34px;
+    line-height: 34px;
+    font-weight: 400;
+  }
+  .quote {
+    font-size: 20px;
+    line-height: 54px;
+  }
+  .quote .blank input {
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    min-width: 10rem;
+    transform: translateY(-25%);
+  }
+  .quote .blank input:placeholder-shown + label {
+    transform: translateY(-80%);
+  }
+  .quote .blank input:not(:placeholder-shown) + label,
+  .quote .blank input:focus + label {
+    transform: translateY(11px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #herb-lib-intro-wrapper {
+    width: 95%;
+    left: 2.5%;
+    right: 2.5%;
+  }
+  .herb-lib-intro-logo {
+    font-size: 55px;
+    line-height: 55px;
+  }
+  .herb-lib-intro-icon {
+    height: 30px;
+  }
+  .herb-lib-intro-title {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .herb-lib-intro-text {
+    margin-top: 15px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+  #playHerbLibs {
+    margin-top: 20px;
+  }
+
+  #herb-lib-wrapper {
+    width: 320px;
+    left: calc((100vw - 320px) / 2);
+  }
+  .herb-lib-container {
     width: 300px;
-    height: 300px;
-    background-color: aqua;
   }
-  #landscape-share-wrapper {
-    width: 600px;
-    height: 315px;
-    background-color: aqua;
-  }
+}

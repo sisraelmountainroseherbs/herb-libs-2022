@@ -41,6 +41,7 @@ var changeBgStepOne = function () {
    var stepTwoSection = document.querySelector("#herb-lib-board-wrapper");
    var stepTwoTitle = document.querySelector("#boardTitleStepTwo");
    var stepThreeTitle = document.querySelector("#boardTitleStepThree");
+   var stepTwoChooseStoryAgainButton = document.querySelector('#chooseStoryAgainStepTwo');
   
 
    // select div sections for showing/hiding
@@ -258,6 +259,30 @@ var changeBgStepOne = function () {
         introSection.classList.add("herb-lib-hidden");
    });
 
+   stepTwoChooseStoryAgainButton.addEventListener("click", function () {
+      // stepTwoSection.classList.add("herb-lib-hidden");
+      // stepOneSection.classList.remove("herb-lib-hidden");
+
+      // selectHerbLibStory.classList.remove("herb-lib-hidden");
+      // herbLibStoryForm.classList.add("herb-lib-hidden");
+      // finishedHerbLibStory.classList.add("herb-lib-hidden");
+ 
+      // herbLibStoryVisible = false;
+      // herbLibInputs.innerHTML = "";
+ 
+      // stepOne.classList.add("active");
+      // stepOne.classList.remove("done");
+      // stepTwo.classList.remove("active");
+      // line.style.width = 0 * 25 + "%";
+      // stepTwo.classList.remove("done");
+      // stepThree.classList.remove("done");
+      // stepThree.classList.remove("active");
+      // stepFour.classList.remove("done");
+      // stepFour.classList.remove("active");
+
+      window.location.reload(true);
+   });
+
    // hide selection dropdown and show generated form for user inputs
    getHerbLibFormButton.addEventListener("click", function () {
      stepTwoSection.classList.remove("herb-lib-hidden");
@@ -438,6 +463,8 @@ function getQuote() {
 
     };
 
+
+
     // function fadeQuote() {
     //     setTimeout(function(){
     //         $(".container").addClass("editing")
@@ -468,7 +495,7 @@ function getQuote() {
 
         stepThreeTitle.innerHTML = stepThreeChoosenTitle;
 
-        herbLibStoryVisible = true;
+        herbLibStoryVisible = false;
 
 
      makeHerbLibStory();
